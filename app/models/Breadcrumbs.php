@@ -13,7 +13,7 @@ class Breadcrumbs extends AppModel
         $breadcrumbs_array = self::getParts($categories, $category_id);
         
 
-                $breadcrumbs = "<li class='breadcrumb-item'><a href=''><i class='fas fa-home'></i></a></li>";
+        $breadcrumbs = "<li class='breadcrumb-item'><a href=''><i class='fas fa-home'></i></a></li>";
         if ($breadcrumbs_array) {
             foreach ($breadcrumbs_array as $slug => $title) 
             {
