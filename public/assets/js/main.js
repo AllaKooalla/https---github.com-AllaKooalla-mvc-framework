@@ -72,6 +72,7 @@ $(function() {
 			success: function (res) {
 				// console.log(res);
 				showCart(res);
+				$this.find('i').removeClass('fa-shopping-cart').addClass('fa-luggage-cart');
 			},
 			error: function () {
 				alert('Error!');
