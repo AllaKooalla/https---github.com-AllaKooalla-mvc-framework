@@ -15,7 +15,8 @@ class Breadcrumbs extends AppModel
 
                 $breadcrumbs = "<li class='breadcrumb-item'><a href=''><i class='fas fa-home'></i></a></li>";
         if ($breadcrumbs_array) {
-            foreach ($breadcrumbs_array as $slug => $title) {
+            foreach ($breadcrumbs_array as $slug => $title) 
+            {
                 $breadcrumbs .= "<li class='breadcrumb-item'><a href='category/{$slug}'>{$title}</a></li>";
             }
         }
