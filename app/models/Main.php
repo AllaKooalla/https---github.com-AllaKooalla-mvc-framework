@@ -1,5 +1,6 @@
 <?php
 
+// модель для главной страницы сайта
 namespace app\models;
 use RedBeanPHP\R;
 

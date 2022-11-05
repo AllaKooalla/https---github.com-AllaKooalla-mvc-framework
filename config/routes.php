@@ -10,6 +10,10 @@ Router::add('^admin/?$', ['controller' => 'Main', 'action' => 'index', 'admin_pr
 Router::add('^admin/(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)/?$', ['admin_prefix' => 'admin']);
 // маршрут для карточек продуктов
 Router::add('^product/(?P<slug>[a-z0-9-]+)/?$', ['controller' => 'Product', 'action' => 'view']);
+// маршрут для страницы категорий
+Router::add('^category/(?P<slug>[a-z0-9-]+)/?$', ['controller' => 'Category', 'action' => 'view']);
+// маршрут для поиска
+Router::add('^search/?$', ['controller' => 'Search', 'action' => 'index']);
 // главная страница
 // ^ - начало строки, $ - конец строки (регулярные выражения)
 Router::add('^$', ['controller' => 'Main', 'action' => 'index']);

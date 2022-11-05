@@ -1,5 +1,6 @@
 <?php
 
+// контроллер для товаров, добавленных в корзину
 namespace app\controllers;
 use app\models\Cart;
 

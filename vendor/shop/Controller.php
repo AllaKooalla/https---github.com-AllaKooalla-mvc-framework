@@ -65,6 +65,16 @@ abstract class Controller
         require APP . "/views/{$prefix}{$this->route['controller']}/{$view}.php";
         die;
     }
+
+    // метод для 404 ошибки
+    // принимает folder - название папки в app/view, view - название файла в это папке 404, response - код ответа
+    public function error_404($folder = 'Error', $view = '404', $response = 404)
+    {
+        http_response_code($response);
+        $this->setMeta('404 - станица не найдена');
+        $this->route['controller'] = $folder;
+        $this->view = $view;
+    }
 }
 
 ?>

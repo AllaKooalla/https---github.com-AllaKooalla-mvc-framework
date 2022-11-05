@@ -22,7 +22,6 @@ use shop\View;
 				<div class="col-md-3 col-6">
 					<h4>Время работы</h4>
 					<ul class="list-unstyled">
-						<li>г. Киев, ул. Пушкина, 10</li>
 						<li>пн-вс: 9:00 - 18:00</li>
 						<li>без перерыва</li>
 					</ul>
@@ -33,7 +32,6 @@ use shop\View;
 					<ul class="list-unstyled">
 						<li><a href="tel:5551234567">555 123-45-67</a></li>
 						<li><a href="tel:5551234567">555 123-45-68</a></li>
-						<li><a href="tel:5551234567">555 123-45-69</a></li>
 					</ul>
 				</div>
 

@@ -15,7 +15,9 @@ class ProductController extends AppController
 
         if (!$product)
         {
-            throw new \Exception("Товар по запросу {$this->route['slug']} не найден", 404);
+            // throw new \Exception("Товар по запросу {$this->route['slug']} не найден", 404);
+            $this->error_404();
+            return;
         }
         // debug($product);
 
