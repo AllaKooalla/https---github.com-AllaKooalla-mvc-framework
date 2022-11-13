@@ -46,8 +46,6 @@ use shop\View;
 								<i class="fas fa-shopping-cart"></i>
 								<span class="badge bg-danger rounded-pill count-items"><?= $_SESSION['cart.qty'] ?? 0 ?></span>
 							</a>
-							
-							<a href="#"><i class="far fa-heart"></i></a>
 
 							<div class="dropdown d-inline-block">
 								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
@@ -55,11 +53,11 @@ use shop\View;
 								</a>
 								<ul class="dropdown-menu">
 									<?php if (empty($_SESSION['user'])): ?>
-										<li><a class="dropdown-item" href="#">Авторизация</a></li>
-										<li><a class="dropdown-item" href="#">Регистрация</a></li>
+										<li><a class="dropdown-item" href="user/login">Авторизация</a></li>
+										<li><a class="dropdown-item" href="user/singup">Регистрация</a></li>
 									<?php else: ?>
-										<li><a class="dropdown-item" href="#">Кабинет</a></li>
-										<li><a class="dropdown-item" href="#">Выход</a></li>
+										<li><a class="dropdown-item" href="user/cabinet">Кабинет</a></li>
+										<li><a class="dropdown-item" href="user/logout">Выход</a></li>
 									<?php endif; ?>
 								</ul>
 							</div>

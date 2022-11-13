@@ -14,6 +14,8 @@ Router::add('^product/(?P<slug>[a-z0-9-]+)/?$', ['controller' => 'Product', 'act
 Router::add('^category/(?P<slug>[a-z0-9-]+)/?$', ['controller' => 'Category', 'action' => 'view']);
 // маршрут для поиска
 Router::add('^search/?$', ['controller' => 'Search', 'action' => 'index']);
+// маршрут для списка из футера
+Router::add('^page/(?P<slug>[a-z0-9-]+)/?$', ['controller' => 'Page', 'action' => 'view']);
 // главная страница
 // ^ - начало строки, $ - конец строки (регулярные выражения)
 Router::add('^$', ['controller' => 'Main', 'action' => 'index']);
