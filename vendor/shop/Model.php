@@ -21,11 +21,12 @@ abstract class Model
     }
 
     // метод заполняет массив значениями атрибутов из метода пост, то есть данными из формы регистрации
-    public function load($data)
+    public function load($post = true)
     {
-        foreach ($this->attributes as $name=> $value)
+        $data = $post ? $_POST : $_GET;
+        foreach ($this->attributes as $name => $value) 
         {
-            if (isset($data[$name]))
+            if (isset($data[$name])) 
             {
                 $this->attributes[$name] = $data[$name];
             }
@@ -84,6 +85,18 @@ abstract class Model
         {
             if ($value != '')
             {
+                $tbl->$name = $value;
+            }
+        }
+        return R::store($tbl);
+    }
+    
+    // обновление учетных данных о пользователе
+    public function update($table, $id): int|string
+    {
+        $tbl = R::load($table, $id);
+        foreach ($this->attributes as $name => $value) {
+            if ($value != '') {
                 $tbl->$name = $value;
             }
         }

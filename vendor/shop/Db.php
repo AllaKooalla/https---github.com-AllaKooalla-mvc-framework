@@ -26,6 +26,10 @@ class Db
             // выведет sql запрос, если включена отладка
             R::debug(true, 3);
         }
+        
+        R::ext('xdispense', function( $type ){
+            return R::getRedBean()->dispense( $type );
+        });
     }
 }
 

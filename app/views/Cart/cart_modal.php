@@ -42,7 +42,7 @@
 <div class="modal-footer">
     <button type="button" class="btn btn-success ripple" data-bs-dismiss="modal">Продолжить покупки</button>
     <?php if (!empty($_SESSION['cart'])): ?>
-    <button type="button" class="btn btn-primary">Оформить заказ</button>
+    <a href="cart/view" class="btn btn-primary">Оформить заказ</a>
     <button type="button" id="clear-cart" class="btn btn-danger">Очистить корзину</button>
     <?php endif; ?>
 </div>
