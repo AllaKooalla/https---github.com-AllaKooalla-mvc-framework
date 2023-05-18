@@ -7,7 +7,7 @@ use shop\Router;
 // в регулярных выражениях более конкретные правила пишутся выше более общих
 // для админки отдельный маршрут
 Router::add('^admin/?$', ['controller' => 'Main', 'action' => 'index', 'admin_prefix' => 'admin']);
-Router::add('^admin/(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)/?$', ['admin_prefix' => 'admin']);
+Router::add('^admin/(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$', ['admin_prefix' => 'admin']);
 // маршрут для карточек продуктов
 Router::add('^product/(?P<slug>[a-z0-9-]+)/?$', ['controller' => 'Product', 'action' => 'view']);
 // маршрут для страницы категорий

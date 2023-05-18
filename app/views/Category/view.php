@@ -24,11 +24,11 @@ use shop\View;
 			</h3>
 
 			<?php if (!empty($category['content'])): ?>
-			<p>
-				<?= $category['content'] ?>
-			</p>
-			<hr>
-			<?php endif; ?>
+                <div class="category-desc">
+                    <?= $category['content'] ?>
+                </div>
+                <hr>
+            <?php endif; ?>
 
 			<?php if (!empty($products)): ?>
 			<div class="row">
