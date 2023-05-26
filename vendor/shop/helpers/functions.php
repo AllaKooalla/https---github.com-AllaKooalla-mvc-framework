@@ -13,7 +13,7 @@ function debug($data, $die = false)
 // сократим функцию htmlspecialchars, чтобы не выполнялись html тэги где не нужно
 function h($str)
 {
-    return htmlspecialchars($str);
+    return htmlspecialchars($str, ENT_QUOTES);
 }
 
 

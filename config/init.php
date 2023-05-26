@@ -24,7 +24,7 @@ define("PATH", 'http://mvc-framework');
 // путь к админке
 define("ADMIN", 'http://mvc-framework/admin');
 // картинка по умолчанию, если ее нет у товара
-define("NO_IMAGE", 'uploads/no_image.jpg');
+define("NO_IMAGE", '/public/uploads/no_image.jpg');
 
 // подключить автозагрузчик
 require_once ROOT . '/vendor/autoload.php';
